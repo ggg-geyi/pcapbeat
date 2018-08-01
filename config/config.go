@@ -7,8 +7,10 @@ import "time"
 
 type Config struct {
 	Period time.Duration `config:"period"`
+	Filepath string `config:"filepath"`
 }
 
 var DefaultConfig = Config{
 	Period: 1 * time.Second,
+	Filepath: "/Users/leo/Desktop/test.pcap",
 }
