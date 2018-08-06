@@ -1,4 +1,4 @@
-package analysis
+package anaylysis
 
 import (
 	"fmt"
@@ -59,7 +59,7 @@ func AnalysisAndGenerate(packetChan chan structs.PcapStruct) {
 	//packetChan := make(chan structs.PcapStruct,10)
 
 	//path := "/Users/leo/Desktop/test.pcap"
-	path := "C:/Users/igaol/Desktop/test.pcap"
+	path := "C:/Users/igaol/Desktop/tt.pcap"
 
 	handler, err := pcap.OpenOffline(path)
 	if err != nil {
@@ -192,6 +192,7 @@ func printPacketInfo(packet gopacket.Packet) structs.PcapStruct{
 	if tcpLayer != nil {
 		fmt.Println("TCP layer detected.")
 		tcp, _ := tcpLayer.(*layers.TCP)
+
 		//tcp, some := tcpLayer.(*layers.TCP)
 		// tcp := tcpLayer
 		/*fmt.Println(reflect.TypeOf(tcp), reflect.TypeOf(tcpLayer))
