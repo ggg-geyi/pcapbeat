@@ -4,8 +4,9 @@
 
 pcapbeat:
   # Defines how often an event is sent to the output
-  period: 1s
+  period: 2m
   filepath:
+  pcapfilefolder:
 
 #================================ General =====================================
 
@@ -19,8 +20,9 @@ pcapbeat:
 
 # Optional fields that you can specify to add additional information to the
 # output.
-#fields:
-#  env: staging
+fields:
+  env: staging
+  tagg: test
 
 
 #============================== Dashboards =====================================
@@ -65,10 +67,10 @@ setup.kibana:
 # Configure what output to use when sending the data collected by the beat.
 
 #-------------------------- Elasticsearch output ------------------------------
-#output.elasticsearch:
+output.elasticsearch:
   # Array of hosts to connect to.
-  #hosts: ["10.1.4.148:9200"]
-  #index: "gaoliangpcaptest"
+  hosts: ["10.1.4.148:9200"]
+  #index: "glpgp"
 
   # Optional protocol and basic auth credentials.
   #protocol: "https"
@@ -76,12 +78,12 @@ setup.kibana:
   #password: "changeme"
 
 #----------------------------- Console output ---------------------------------
-output.console:
+#output.console:
 # Boolean flag to enable or disable the output module.
-  enabled: true
+  #enabled: true
 
 # Pretty print json event
-  pretty: true
+  #pretty: true
 
 #----------------------------- Logstash output --------------------------------
 #output.logstash:

@@ -9,7 +9,7 @@ import (
 
 func main() {
 
-	fmt.Println("Hello Pcpabeat")
+	fmt.Println("Hello Pcpabeat created by newland")
 
 	if err := cmd.RootCmd.Execute(); err != nil {
 		os.Exit(1)

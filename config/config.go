@@ -8,9 +8,12 @@ import "time"
 type Config struct {
 	Period time.Duration `config:"period"`
 	Filepath string `config:"filepath"`
+	Pcapfilefolder string `config:"pcapfilefolder"`
 }
 
 var DefaultConfig = Config{
-	Period: 1 * time.Second,
+	// 默认时间1分钟
+	Period: 1 * time.Minute,
 	Filepath: "/Users/leo/Desktop/test.pcap",
+	Pcapfilefolder: "./pcap",
 }
