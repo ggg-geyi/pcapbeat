@@ -4,9 +4,9 @@
 
 pcapbeat:
   # Defines how often an event is sent to the output
-  period: 2m
-  filepath:
-  pcapfilefolder:
+  period: 10s
+  pcapfilefolder: "C:/Users/igaol/Desktop"
+  concurrentcount: 10
 
 #================================ General =====================================
 

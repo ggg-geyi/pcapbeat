@@ -5,3 +5,4 @@
 /pcapbeat
 /pcapbeat.test
 *.pyc
+logs/pcapbeat

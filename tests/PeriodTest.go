@@ -6,20 +6,27 @@ import (
 	"io/ioutil"
 	"os"
 	"strings"
+	"container/list"
 )
 
 func main() {
 
-	ticker := time.NewTicker(5 * time.Second)
+	ticker := time.NewTicker(1 * time.Second)
 
 	dirpath := "C:/Users/igaol/Desktop"
 
 	PthSep := string(os.PathSeparator)
 
+	tt := make([]string, 5)
+
 	for {
 		select {
 		case <- ticker.C:
 		}
+
+		tt = append(tt, time.Now().Format("2006-01-02 15:04:05"))
+
+		fmt.Println(tt)
 
 		fmt.Println("======================================================")
 
@@ -37,6 +44,9 @@ func main() {
 		}
 
 	}
+}
 
 
+func test() *list.List{
+	return list.New()
 }

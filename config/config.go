@@ -7,13 +7,13 @@ import "time"
 
 type Config struct {
 	Period time.Duration `config:"period"`
-	Filepath string `config:"filepath"`
 	Pcapfilefolder string `config:"pcapfilefolder"`
+	Concurrentcount uint `config:"concurrentcount"`
 }
 
 var DefaultConfig = Config{
 	// 默认时间1分钟
 	Period: 1 * time.Minute,
-	Filepath: "/Users/leo/Desktop/test.pcap",
 	Pcapfilefolder: "./pcap",
+	Concurrentcount: 5,
 }

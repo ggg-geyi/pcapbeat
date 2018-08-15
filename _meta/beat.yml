@@ -5,5 +5,5 @@
 pcapbeat:
   # Defines how often an event is sent to the output
   period: 50s
-  filepath:
   pcapfilefolder:
+  concurrentcount: 5
