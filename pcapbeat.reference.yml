@@ -152,8 +152,8 @@ output.elasticsearch:
   # Set gzip compression level.
   #compression_level: 0
 
-  # Optional protocol and basic auth credentials.
-  #protocol: "https"
+  # Optional protocols and basic auth credentials.
+  #protocols: "https"
   #username: "elastic"
   #password: "changeme"
 
@@ -695,8 +695,8 @@ setup.kibana:
   # IPv6 addresses should always be defined as: https://[2001:db8::1]:5601
   #host: "localhost:5601"
 
-  # Optional protocol and basic auth credentials.
-  #protocol: "https"
+  # Optional protocols and basic auth credentials.
+  #protocols: "https"
   #username: "elastic"
   #password: "changeme"
 
@@ -815,8 +815,8 @@ logging.files:
   # Set gzip compression level.
   #compression_level: 0
 
-  # Optional protocol and basic auth credentials.
-  #protocol: "https"
+  # Optional protocols and basic auth credentials.
+  #protocols: "https"
   #username: "beats_system"
   #password: "changeme"
 

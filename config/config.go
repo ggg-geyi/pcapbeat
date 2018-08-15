@@ -9,6 +9,7 @@ type Config struct {
 	Period time.Duration `config:"period"`
 	Pcapfilefolder string `config:"pcapfilefolder"`
 	Concurrentcount uint `config:"concurrentcount"`
+	DeleteTaskFlag bool `config:"deleteTaskFlag"`
 }
 
 var DefaultConfig = Config{
@@ -16,4 +17,5 @@ var DefaultConfig = Config{
 	Period: 1 * time.Minute,
 	Pcapfilefolder: "./pcap",
 	Concurrentcount: 5,
+	DeleteTaskFlag: true,
 }

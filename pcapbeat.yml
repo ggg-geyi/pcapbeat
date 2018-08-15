@@ -7,6 +7,7 @@ pcapbeat:
   period: 10s
   pcapfilefolder: "C:/Users/igaol/Desktop"
   concurrentcount: 10
+  deleteTaskFlag: false
 
 #================================ General =====================================
 
@@ -22,7 +23,6 @@ pcapbeat:
 # output.
 fields:
   env: staging
-  tagg: test
 
 
 #============================== Dashboards =====================================
@@ -72,8 +72,8 @@ output.elasticsearch:
   hosts: ["10.1.4.148:9200"]
   #index: "glpgp"
 
-  # Optional protocol and basic auth credentials.
-  #protocol: "https"
+  # Optional protocols and basic auth credentials.
+  #protocols: "https"
   #username: "elastic"
   #password: "changeme"
 

@@ -4,6 +4,7 @@
 
 pcapbeat:
   # Defines how often an event is sent to the output
-  period: 50s
+  period: 1m
   pcapfilefolder:
   concurrentcount: 5
+  deleteTaskFlag: true

@@ -16,7 +16,7 @@ const PathSeparator = string(os.PathSeparator)
 获取特定文件下下边的特定后缀的文件列表。
 返回的是文件的绝对路径
  */
-func listFolderFilex(path string, suffix string)(*list.List, error){
+func listFolderFile(path string, suffix string)(*list.List, error){
 	dir, err := ioutil.ReadDir(path)
 
 	if err != nil {
@@ -125,55 +125,4 @@ func FetchNumberFolderFile(path string, suffix string, number int)([]string, err
 	}
 
 	return fileSlice[:minNumber],nil
-}
-
-
-func main() {
-
-	ticker := time.NewTicker(5 * time.Second)
-
-	RenamePcapFileToDealing("C:/Users/igaol/Desktop/tt.pcap")
-
-	RenamePcapDealingFileToDone("C:/Users/igaol/Desktop/tt.pcap.20180815111331.dealing")
-
-
-	dirpath := "C:/Users/igaol/Desktop"
-
-	ary := [...]string{"A","B","C","D"}
-
-	fmt.Println(ary[:len(ary)])
-
-
-	for {
-		select {
-		case <- ticker.C:
-		}
-
-		fmt.Println("======================================================")
-
-		fmt.Println(time.Now().Format("2006-01-02 15:04:05"))
-
-		fmt.Println(time.Now().Format("20060102150405"))
-
-
-		sl, err := FetchNumberFolderFile(dirpath,".pcap", 0)
-
-		if err != nil {
-			panic(err)
-		}
-
-		for idx, v := range sl{
-			fmt.Println(idx, v)
-		}
-
-		/*lst, err := ListFolderFile(dirpath,".pcap")
-
-		if err!=nil{
-			panic(err)
-		}
-
-		for e := lst.Front(); e != nil; e = e.Next() {
-			fmt.Print(e.Value, " ")
-		}*/
-	}
 }
