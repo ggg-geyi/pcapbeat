@@ -115,6 +115,7 @@ func (bt *Pcapbeat) Run(b *beat.Beat) error {
 							"filepath": filePath,
 							"client_ip":   x.Pk.Net.Src().String(),
 							"server":      x.Pk.Net.Dst().String(),
+							"ip": x.Ip,
 							"client_port": x.Pk.Transport.Src().String(),
 							"port":        x.Pk.Transport.Dst().String(),
 							"http": common.MapStr{
@@ -128,6 +129,7 @@ func (bt *Pcapbeat) Run(b *beat.Beat) error {
 							"bytes_out":    x.BytesOut,
 							"path":         x.Path,
 							"method":       x.Method,
+							"query": x.Query,
 							"responsetime": x.Responsetime,
 						},
 					}

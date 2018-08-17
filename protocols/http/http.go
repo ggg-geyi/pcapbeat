@@ -39,7 +39,9 @@ func CombineReqAndResp(packet gopacket.Packet, reqMap map[PacketKey]CombineHttpR
 
 					reqMap[key] = CombineHttpRecord{Pk:key, Req:payloadString, ClientIp:key.Net.Src().String(),
 						ClientPort:key.Transport.Src().String(), Method: items[0],
-						Path:items[1], Port:key.Transport.Dst().String()}
+						Path:items[1], Port:key.Transport.Dst().String(),
+						Ip: key.Net.Dst().String(),
+						Query: items[0] + " " + items[1]}
 
 				}else{
 					/* response 服务器回应数据流
