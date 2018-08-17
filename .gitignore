@@ -6,3 +6,8 @@
 /pcapbeat.test
 *.pyc
 logs/pcapbeat
+*.svn-base
+.svn/wc.db-journal
+.svn/wc.db
+.svn/format
+.svn/entries
